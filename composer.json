@@ -1,0 +1,21 @@
+{
+    "name": "ablansett/chickenspeak",
+    "description": "Make the Chicken Speak",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Blansett",
+            "email": "adam.blansett@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/",
+            "src\\Classes\\": "src/Classes/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5"
+    }
+}
