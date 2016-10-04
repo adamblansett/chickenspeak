@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use src\Classes\Chicken;
+
 /**
  * Description of ChickenTest
  *
@@ -9,12 +10,32 @@ use src\Classes\Chicken;
  */
 class ChickenTest extends TestCase
 {
-    
-    public function testSpeak()
-    {
-        $chicken = new Chicken();
 
-        $this->assertEquals("Bwwaaaaaaaaaaaakkkkk!", $chicken->speak());
+    private $chicken = null;
+
+    public function setUp ()
+    {
+        parent::setUp();
+
+        $this->chicken = new Chicken();
+    }
+
+    public function testSpeak ()
+    {
+
+        $this->assertEquals( "Bwwaaaaaaaaaaaakkkkk!\n", $this->chicken->speak() );
+    }
+
+    public function testSleep ()
+    {
+
+        $this->assertEquals( "Zzzzzzzz!", $this->chicken->sleep() );
+    }
+
+    public function testWakeUp ()
+    {
+
+        $this->assertEquals( "The chicken is now awake", $this->chicken->wakeUp( 'chicken' ) );
     }
 
 }
